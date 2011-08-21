@@ -1,10 +1,12 @@
 require "ascii_heart/version"
 
+# Defines a method that creates an ASCII art heart.
 module AsciiHeart
  include Math
 
   HEART = "\u2665"
 
+  # Returns a string that will look like an heart
   def heart(size)
     return HEART if size < 3
     px = size * 0.5
