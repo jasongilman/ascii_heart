@@ -7,7 +7,7 @@ module AsciiHeart
   RED = "\033[31m"
   HEART = RED + "\u2665"
 
-  # Returns a string that will look like an heart
+  # Returns a string that will look like a heart
   def heart(size)
     return HEART if size < 3
     px = size * 0.5
