@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+$:.unshift File.dirname(__FILE__) + '/../lib'
+require 'ascii_heart'
+include AsciiHeart
+
+bad_input = lambda do
+  puts "Bad input.  Takes one argument of size"
+  exit(false)
+end
+
+if ARGV.size != 1
+  bad_input.call
+end
+begin
+  size = Integer(ARGV[0])
+rescue => e
+  bad_input.call
+end
+
+puts heart(size)

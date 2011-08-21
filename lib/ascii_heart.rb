@@ -3,15 +3,18 @@ require "ascii_heart/version"
 module AsciiHeart
  include Math
 
-  def heart(width, height)
-    px = width * 0.5
-    py = height * 0.37
-    r = width * 0.625
+  HEART = "\u2665"
 
-    y_nums = (1..width).map {|m| m }.reverse
+  def heart(size)
+    return HEART if size < 3
+    px = size * 0.5
+    py = size * 0.37
+    r = size * 0.625
+
+    y_nums = (1..size).map {|m| m }.reverse
     matrix = y_nums.map do |y|
-      (1..height).map do |x|
-        if y > height * 0.7
+      (1..size).map do |x|
+        if y > size * 0.7
           sqrt( (px - x) ** 2 + (py - y) ** 2 ) < r
         else
           x < 1.7 * y
@@ -19,7 +22,7 @@ module AsciiHeart
       end
     end
     matrix[0][0] = false
-    matrix[1][0] = false
+    matrix[1][0] = false if matrix.size > 1
 
     new_matrix = matrix.map do |row|
       row = row.dup.reverse + row.dup
