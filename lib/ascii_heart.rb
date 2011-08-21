@@ -4,7 +4,8 @@ require "ascii_heart/version"
 module AsciiHeart
  include Math
 
-  HEART = "\u2665"
+  RED = "\033[31m"
+  HEART = RED + "u2665"
 
   # Returns a string that will look like an heart
   def heart(size)
@@ -26,7 +27,7 @@ module AsciiHeart
     matrix[0][0] = false
     matrix[1][0] = false if matrix.size > 1
 
-    new_matrix = matrix.map do |row|
+    RED + matrix.map do |row|
       row = row.dup.reverse + row.dup
       row = row.map {|b| b ? "@" : " " }
       row[0] = " "
