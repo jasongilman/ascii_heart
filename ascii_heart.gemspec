@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jason Gilman"]
   s.email       = ["jason.gilman@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{A module that will draw an ASCII art heart.}
+  s.description = %q{My (late) contribution to _why day.  Defines a module and executable that will draw an ASCII art heart.}
 
   s.rubyforge_project = "ascii_heart"
 
@@ -18,7 +18,4 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
 end
