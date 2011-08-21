@@ -5,7 +5,7 @@ module AsciiHeart
  include Math
 
   RED = "\033[31m"
-  HEART = RED + "u2665"
+  HEART = RED + "\u2665"
 
   # Returns a string that will look like an heart
   def heart(size)
