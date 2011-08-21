@@ -1,6 +1,7 @@
+require "ascii_heart/version"
 
 module AsciiHeart
-  include Math
+ include Math
 
   def heart(width, height)
     px = width * 0.5
