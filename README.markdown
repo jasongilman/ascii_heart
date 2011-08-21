@@ -24,6 +24,21 @@ ASCII Heart is a for-fun project I created for _why day that draws an ASCII art 
                   @@@@@@@@@@@@              
                    @@@@@@@@@@               
                      @@@@@@                 
-                       @@                   
+                       @@            
 
+    ascii_heart 10       
+
+      @@@@@@@  @@@@@@@  
+     @@@@@@@@@@@@@@@@@@ 
+     @@@@@@@@@@@@@@@@@@ 
+     @@@@@@@@@@@@@@@@@@ 
+      @@@@@@@@@@@@@@@@  
+        @@@@@@@@@@@@    
+         @@@@@@@@@@     
+           @@@@@@       
+             @@       
+             
+    ascii_heart 1
+    
+    ♥  
 
